@@ -1,6 +1,6 @@
 package com.ust.module4.assignment1;
 
-import java.util.Date;
+
 
 public class ToDoList {
 	
@@ -12,7 +12,7 @@ public class ToDoList {
         taskCount = 0;
     }
 
-    public void addTask(String description, Date dueDate) {
+    public void addTask(String description, String dueDate) {
         if (taskCount < tasks.length) {
             tasks[taskCount++] = new TaskDemo(description, dueDate);
         } else {

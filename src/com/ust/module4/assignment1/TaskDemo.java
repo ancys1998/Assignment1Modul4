@@ -1,13 +1,12 @@
 package com.ust.module4.assignment1;
 
-import java.util.Date;
 
 public class TaskDemo {
 	
 	private String description;
-    private Date dueDate;
+    private String dueDate;
 
-    public TaskDemo(String description, Date dueDate) {
+    public TaskDemo(String description, String dueDate) {
         this.description = description;
         this.dueDate = dueDate;
     }
@@ -20,11 +19,11 @@ public class TaskDemo {
         this.description = description;
     }
 
-    public Date getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(String dueDate) {
         this.dueDate = dueDate;
     }
 

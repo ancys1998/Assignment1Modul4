@@ -1,34 +1,29 @@
 package com.ust.module4.assignment1;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.util.Scanner;
 
 public class TaskMain {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
-	
+	Scanner sc=new Scanner(System.in);
 	ToDoList myToDoList = new ToDoList(5);
 
-   
-    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    try {
-        
-        myToDoList.addTask("Finish homework", sdf.parse("10/09/2024"));
-        myToDoList.addTask("Grocery shopping", sdf.parse("12/09/2024"));
-        myToDoList.addTask("Call mom", sdf.parse("11/09/2024"));
+    myToDoList.addTask("Complete work", "10/09/2024");
+	myToDoList.addTask("Shopping","12/09/2024");
+	myToDoList.addTask("Pickup Dad", "11/09/2024");
 
-       
-        System.out.println("Tasks in the To-Do List:");
-        myToDoList.displayTasks();
+      
+	System.out.println("Tasks in the To-Do List:");
+	myToDoList.displayTasks();
 
-        myToDoList.removeTask(1);
+	System.out.println("Which task to be remove?");
+	int tasknum=sc.nextInt();
+	myToDoList.removeTask(tasknum);
 
-        System.out.println("Tasks after removal:");
-        myToDoList.displayTasks();
-    } catch (ParseException e) {
-        System.out.println("Date format is incorrect.");
-    }
+	System.out.println("Tasks after removal:");
+	myToDoList.displayTasks();
 }
 }
